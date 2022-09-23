@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:livescore_app/core/theme.dart';
+import 'package:livescore_app/ui/select_screen/select_sports_screen.dart';
 
 class AuthScreen extends StatelessWidget {
   const AuthScreen({super.key});
@@ -38,7 +39,10 @@ class AuthScreen extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   ElevatedButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.of(context).pushReplacement(MaterialPageRoute(
+                          builder: (context) => SelectSportsScreen.init()));
+                    },
                     style: Theme.of(context).elevatedButtonTheme.style,
                     child: const Padding(
                       padding:

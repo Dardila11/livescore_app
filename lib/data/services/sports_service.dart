@@ -24,6 +24,7 @@ class SportsService implements SportsApi {
   Future<List<Sport>> getSports() async {
     Uri url = Uri.parse('$sportsApi/all_sports.php');
     final response = await http.get(url);
-    return sportsFromJson(response.body);
+    Sports sports = sportsFromJson(response.body);
+    return sports.sports;
   }
 }

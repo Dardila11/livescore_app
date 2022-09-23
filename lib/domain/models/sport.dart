@@ -1,7 +1,20 @@
 import 'dart:convert';
 
-List<Sport> sportsFromJson(String str) =>
-    List<Sport>.from(json.decode(str).map((x) => Sport.fromJson(x)));
+Sports sportsFromJson(String str) => Sports.fromJson(json.decode(str));
+
+class Sports {
+  Sports({
+    required this.sports,
+  });
+
+  final List<Sport> sports;
+
+  Sports copyWith({required List<Sport> sports}) => Sports(sports: sports);
+
+  factory Sports.fromJson(Map<String, dynamic> json) => Sports(
+        sports: List<Sport>.from(json["sports"].map((x) => Sport.fromJson(x))),
+      );
+}
 
 class Sport {
   Sport({
