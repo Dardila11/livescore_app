@@ -94,9 +94,9 @@ class AuthImageContainer extends StatelessWidget {
           ),
         ),
         const Positioned(
-          right: 43,
+          right: 41,
           bottom: 180,
-          child: Ball(color: Colors.blue, width: 24, height: 24),
+          child: Ball(color: AppTheme.blue, width: 24, height: 24),
         ),
         const Positioned(
           left: 80,

@@ -26,6 +26,12 @@ class AppTheme {
   ThemeData get theme => ThemeData(
         scaffoldBackgroundColor: AppColors.darkGreyNavy,
         backgroundColor: AppColors.greyNavy,
+        appBarTheme: const AppBarTheme(
+          centerTitle: false,
+          elevation: 0,
+          backgroundColor: AppColors.darkGreyNavy,
+          foregroundColor: AppColors.white,
+        ),
         primaryTextTheme: const TextTheme(
           headline1: TextStyle(
             color: AppColors.white,

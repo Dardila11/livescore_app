@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:livescore_app/core/theme.dart';
 import 'package:livescore_app/domain/models/sport.dart';
 import 'package:livescore_app/domain/repository/sports_api.dart';
+import 'package:livescore_app/ui/home_screen/home_screen.dart';
 import 'package:livescore_app/ui/providers/sports_provider.dart';
 import 'package:provider/provider.dart';
 
@@ -83,8 +84,17 @@ class SelectSportsScreen extends StatelessWidget {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => SelectSportsScreen.init()));
+                      final sportsProvider = context.read<SportsProvider>();
+                      Navigator.of(context).pushReplacement(
+                        MaterialPageRoute(
+                          builder: (_) => ChangeNotifierProvider.value(
+                            value: sportsProvider,
+                            child: HomeScreen(
+                              sportsList: sportsList!,
+                            ),
+                          ),
+                        ),
+                      );
                     },
                     style: Theme.of(context).elevatedButtonTheme.style,
                     child: const Padding(
