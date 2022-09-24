@@ -1,16 +1,14 @@
-# livescore_app
+# Livescore App
 
-A new Flutter project.
+Flutter project to fetch sports and leagues from an external API
 
-## Getting Started
+## Sports BD API
 
-This project is a starting point for a Flutter application.
+https://www.thesportsdb.com/api.php
 
-A few resources to get you started if this is your first Flutter project:
+## Figma design
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+https://www.figma.com/file/9qx19qdRSbrJePt6esnril/Live-Score-UI-KIT-(FREEBIES)-%E2%9A%BD%EF%B8%8F-(Community)?node-id=0%3A1
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+
+
